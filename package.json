@@ -1,0 +1,34 @@
+{
+  "name": "deci",
+  "version": "1.0.0",
+  "description": "Deci - UK Startup Equity Tax & Accounting Advice Platform",
+  "main": "index.js",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "start": "cd backend && npm start",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "install:all": "npm install && npm run install:frontend && npm run install:backend",
+    "typecheck": "cd frontend && npm run typecheck && cd ../backend && npm run build",
+    "lint": "cd frontend && npm run lint"
+  },
+  "keywords": [
+    "equity",
+    "tax",
+    "accounting",
+    "uk",
+    "startup",
+    "emi",
+    "share-options"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
