@@ -1,24 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 import './App.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import ChatInterface from './components/ChatInterface';
-import InfoSections from './components/InfoSections';
-import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import ChatArea from './components/ChatArea';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
-  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const chatAreaRef = useRef<{ handleNewChat: () => void }>(null);
+
+  const handleNewChat = () => {
+    chatAreaRef.current?.handleNewChat();
+  };
 
   return (
-    <div className="App">
-      <Header />
-      <Hero onStartChat={() => setIsChatOpen(true)} />
-      <InfoSections />
-      <Footer />
-      {isChatOpen && (
-        <ChatInterface onClose={() => setIsChatOpen(false)} />
-      )}
-    </div>
+    <ThemeProvider>
+      <div className="app">
+        <Sidebar 
+          collapsed={sidebarCollapsed} 
+          onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
+          onNewChat={handleNewChat}
+        />
+        <motion.main 
+          className={`main-content ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}
+          layout
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          <ChatArea ref={chatAreaRef} />
+        </motion.main>
+      </div>
+    </ThemeProvider>
   );
 }
 

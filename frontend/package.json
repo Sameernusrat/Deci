@@ -11,6 +11,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.19.1",
+    "lucide-react": "^0.523.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
