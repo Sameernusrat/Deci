@@ -26,6 +26,24 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isLoading }) => {
     navigator.clipboard.writeText(text);
   };
 
+  const renderFormattedText = (text: string) => {
+    // Split text into lines and process each one
+    const lines = text.split('\n');
+    return lines.map((line, index) => {
+      // Check if line is a heading (starts with **)
+      if (line.trim().startsWith('**') && line.trim().endsWith('**')) {
+        const headingText = line.trim().slice(2, -2); // Remove ** from both ends
+        return (
+          <div key={index} style={{ fontWeight: 'bold', marginTop: index > 0 ? '16px' : '0', marginBottom: '8px' }}>
+            {headingText}
+          </div>
+        );
+      }
+      // Regular line
+      return <div key={index}>{line || '\u00A0'}</div>; // Use non-breaking space for empty lines
+    });
+  };
+
   return (
     <div className="chat-messages">
       <div className="messages-container">
@@ -64,8 +82,8 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isLoading }) => {
                   </span>
                 </div>
                 
-                <div className="message-text">
-                  {message.content}
+                <div className="message-text" style={{ whiteSpace: 'pre-wrap' }}>
+                  {message.type === 'assistant' ? renderFormattedText(message.content) : message.content}
                 </div>
                 
                 {message.type === 'assistant' && (
