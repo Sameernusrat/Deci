@@ -2,6 +2,13 @@ export interface ChatResponse {
   text: string;
   suggestions: string[];
   relatedTopics: string[];
+  sources?: Array<{
+    url: string;
+    section: string;
+    section_title: string;
+    snippet: string;
+  }>;
+  rag_used?: boolean;
 }
 
 interface OllamaRequest {
@@ -14,6 +21,20 @@ interface OllamaRequest {
 interface OllamaResponse {
   response: string;
   done: boolean;
+}
+
+interface RAGResponse {
+  answer: string;
+  sources: Array<{
+    url: string;
+    section: string;
+    section_title: string;
+    snippet: string;
+  }>;
+  metadata: any;
+  rag_available: boolean;
+  fallback_mode?: boolean;
+  error?: string;
 }
 
 export class ChatService {
@@ -90,16 +111,87 @@ UK EQUITY SCHEMES - mention ALL options with pros/cons:
 
   private ollamaEndpoint = 'http://localhost:11434/api/generate';
   private model = 'llama3.2';
+  private ragBridgePath = 'python3';
+  private ragBridgeScript = '/Users/sameernusrat/deci/rag_bridge.py';
 
-  private async callOllama(prompt: string): Promise<string> {
+  private async callRAG(question: string): Promise<RAGResponse> {
+    const { exec } = require('child_process');
+    const util = require('util');
+    const execAsync = util.promisify(exec);
+    
+    try {
+      // Escape the question for shell execution
+      const escapedQuestion = question.replace(/'/g, "'\"'\"'");
+      const command = `${this.ragBridgePath} ${this.ragBridgeScript} '${escapedQuestion}'`;
+      
+      console.log('Calling RAG system for question:', question);
+      const { stdout, stderr } = await execAsync(command, {
+        timeout: 120000, // 2 minute timeout
+        cwd: process.cwd()
+      });
+      
+      if (stderr) {
+        console.warn('RAG stderr:', stderr);
+      }
+      
+      const ragResponse: RAGResponse = JSON.parse(stdout);
+      console.log('RAG response received, rag_available:', ragResponse.rag_available);
+      
+      return ragResponse;
+    } catch (error) {
+      console.error('Error calling RAG system:', error);
+      return {
+        answer: '',
+        sources: [],
+        metadata: {},
+        rag_available: false,
+        fallback_mode: true,
+        error: error instanceof Error ? error.message : String(error)
+      };
+    }
+  }
+
+  private async callOllama(prompt: string, context?: string): Promise<string> {
     const axios = require('axios');
     
     try {
+      // If we have context from RAG, modify the system prompt
+      let systemPrompt = this.systemPrompt;
+      if (context) {
+        systemPrompt = `You are an AI advisor specializing in UK EMPLOYMENT EQUITY COMPENSATION. You have access to official HMRC documentation to provide accurate, authoritative advice.
+
+IMPORTANT: Base your response on the provided HMRC context below. Be confident and definitive since this comes from official government sources.
+
+HMRC CONTEXT:
+${context}
+
+USER INSTRUCTIONS:
+- Use the HMRC context above to answer questions about EMI schemes, share options, and tax implications
+- Provide structured responses with headings and bullet points
+- Be authoritative since you're citing official HMRC guidance
+- If the context doesn't fully answer the question, say so and provide what information is available
+- Always cite that your information comes from official HMRC documentation
+
+FORMAT responses like this:
+
+**Key Information from HMRC**
+• [Point from HMRC guidance]
+• [Another key point]
+
+**Tax Implications**
+• [Tax information from HMRC]
+
+**What This Means for You**
+• [Practical application]
+
+EMI = Enterprise Management Incentives (NOT EML)`;
+      }
+      
       const requestBody: OllamaRequest = {
         model: this.model,
         prompt: prompt,
         stream: false,
-        system: this.systemPrompt
+        system: systemPrompt
       };
 
       const response = await axios.post(this.ollamaEndpoint, requestBody, {
@@ -209,19 +301,65 @@ UK EQUITY SCHEMES - mention ALL options with pros/cons:
 
   async processMessage(message: string, context?: any): Promise<ChatResponse> {
     try {
-      const llmResponse = await this.callOllama(message);
-      const formattedResponse = this.formatResponse(llmResponse, message);
+      // Step 1: Try to get information from RAG system first
+      console.log('Processing message with RAG-enhanced pipeline');
+      const ragResponse = await this.callRAG(message);
       
-      return {
+      let finalResponse: string;
+      let usedRAG = false;
+      let sources: any[] = [];
+      
+      if (ragResponse.rag_available && !ragResponse.fallback_mode && ragResponse.answer) {
+        // RAG system provided a good answer
+        console.log('Using RAG-based response');
+        finalResponse = ragResponse.answer;
+        sources = ragResponse.sources || [];
+        usedRAG = true;
+      } else {
+        // Fallback to Ollama, but try to use any retrieved context
+        console.log('RAG not available, falling back to Ollama');
+        let contextFromRAG = '';
+        
+        // If RAG found some sources but couldn't generate answer, use the source content as context
+        if (ragResponse.sources && ragResponse.sources.length > 0) {
+          contextFromRAG = ragResponse.sources
+            .map(source => `From ${source.section_title}: ${source.snippet}`)
+            .join('\n\n');
+          sources = ragResponse.sources;
+        }
+        
+        const llmResponse = await this.callOllama(message, contextFromRAG);
+        finalResponse = this.formatResponse(llmResponse, message);
+        
+        // If we used context from RAG, mark it as partially RAG-enhanced
+        if (contextFromRAG) {
+          usedRAG = true;
+          finalResponse += '\n\n*This response is enhanced with official HMRC documentation.*';
+        }
+      }
+      
+      // Format the final response
+      const formattedResponse = usedRAG ? finalResponse : this.formatResponse(finalResponse, message);
+      
+      const response: ChatResponse = {
         text: formattedResponse,
         suggestions: this.generateSuggestionsFromResponse(formattedResponse, message),
-        relatedTopics: this.extractRelatedTopics(formattedResponse)
+        relatedTopics: this.extractRelatedTopics(formattedResponse),
+        rag_used: usedRAG
       };
+      
+      // Add sources if available
+      if (sources.length > 0) {
+        response.sources = sources;
+      }
+      
+      return response;
+      
     } catch (error) {
-      console.error('Error processing message with LLM:', error);
+      console.error('Error processing message:', error);
       
       return {
-        text: `I apologize, but I'm having trouble connecting to the AI service right now. However, I can still help with general equity and tax questions. 
+        text: `I apologize, but I'm having trouble processing your request right now. However, I can still help with general equity and tax questions.
 
 I specialize in:
 • EMI schemes and eligibility
@@ -238,12 +376,28 @@ Please try your question again, or contact support if the issue persists.`,
           'What are the different share option schemes?',
           'How is capital gains tax calculated?'
         ],
-        relatedTopics: this.topics.slice(0, 4)
+        relatedTopics: this.topics.slice(0, 4),
+        rag_used: false
       };
     }
   }
 
   getAvailableTopics(): string[] {
     return this.topics;
+  }
+
+  async checkRAGStatus(): Promise<{ available: boolean; error?: string }> {
+    try {
+      const ragResponse = await this.callRAG('status');
+      return {
+        available: ragResponse.rag_available,
+        error: ragResponse.error
+      };
+    } catch (error) {
+      return {
+        available: false,
+        error: error instanceof Error ? error.message : String(error)
+      };
+    }
   }
 }
