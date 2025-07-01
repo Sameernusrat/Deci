@@ -1,0 +1,7 @@
+{
+  "collection_name": "hmrc_employment_securities",
+  "persist_directory": ".chromadb",
+  "document_count": 1406,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "created_at": "2025-07-01T18:15:51.073009"
+}

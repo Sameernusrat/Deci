@@ -17,7 +17,9 @@ router.post('/message', async (req, res) => {
     res.json({
       response: response.text,
       suggestions: response.suggestions,
-      relatedTopics: response.relatedTopics
+      relatedTopics: response.relatedTopics,
+      sources: response.sources || [],
+      rag_used: response.rag_used || false
     });
   } catch (error) {
     console.error('Chat error:', error);

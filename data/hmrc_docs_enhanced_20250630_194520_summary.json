@@ -1,0 +1,35 @@
+{
+  "total_documents": 74,
+  "total_characters": 67379,
+  "average_chunk_size": 910.527027027027,
+  "source_urls_count": 10,
+  "unique_sections": 10,
+  "depth_distribution": {
+    "0": 26,
+    "1": 48
+  },
+  "section_distribution": {
+    "ersm110000": 7,
+    "ersm20000": 9,
+    "ersm30000": 10,
+    "ersm110550": 6,
+    "ersm110100": 8,
+    "ersm110520": 7,
+    "ersm110110": 7,
+    "ersm140000": 6,
+    "ersm111100": 6,
+    "ersm110050": 8
+  },
+  "discovery_stats": {
+    "max_depth": 1,
+    "max_pages": 10,
+    "total_discovered_urls": 10,
+    "failed_urls": 0
+  },
+  "created_at": "2025-06-30T19:45:20.279089",
+  "files": {
+    "pickle": "data/hmrc_docs_enhanced_20250630_194520.pkl",
+    "json": "data/hmrc_docs_enhanced_20250630_194520.json",
+    "summary": "data/hmrc_docs_enhanced_20250630_194520_summary.json"
+  }
+}

@@ -125,17 +125,27 @@ UK EQUITY SCHEMES - mention ALL options with pros/cons:
       const command = `${this.ragBridgePath} ${this.ragBridgeScript} '${escapedQuestion}'`;
       
       console.log('Calling RAG system for question:', question);
+      console.log('Executing command:', command);
       const { stdout, stderr } = await execAsync(command, {
         timeout: 120000, // 2 minute timeout
-        cwd: process.cwd()
+        cwd: '/Users/sameernusrat/deci'  // Ensure we're in the correct directory
       });
       
       if (stderr) {
         console.warn('RAG stderr:', stderr);
       }
       
+      // Parse the JSON response - stdout should contain clean JSON
+      console.log('RAG stdout length:', stdout.length);
+      console.log('RAG stdout first 200 chars:', stdout.substring(0, 200));
       const ragResponse: RAGResponse = JSON.parse(stdout);
       console.log('RAG response received, rag_available:', ragResponse.rag_available);
+      console.log('RAG response keys:', Object.keys(ragResponse));
+      
+      // Ensure we got a valid response
+      if (!ragResponse.hasOwnProperty('rag_available')) {
+        throw new Error('Invalid RAG response format');
+      }
       
       return ragResponse;
     } catch (error) {
@@ -309,37 +319,49 @@ EMI = Enterprise Management Incentives (NOT EML)`;
       let usedRAG = false;
       let sources: any[] = [];
       
-      if (ragResponse.rag_available && !ragResponse.fallback_mode && ragResponse.answer) {
-        // RAG system provided a good answer
-        console.log('Using RAG-based response');
+      // Prioritize RAG responses - use RAG if we have any meaningful answer
+      if (ragResponse.rag_available && ragResponse.answer && ragResponse.answer.trim().length > 20 && !ragResponse.error) {
+        // RAG system provided a good answer - use it directly
+        console.log('✅ Using RAG-based response with', ragResponse.sources?.length || 0, 'sources');
         finalResponse = ragResponse.answer;
         sources = ragResponse.sources || [];
         usedRAG = true;
+        
+        // Ensure sources are properly formatted for frontend
+        if (sources.length > 0) {
+          finalResponse += '\n\n*This response is based on official HMRC documentation.*';
+        }
       } else {
-        // Fallback to Ollama, but try to use any retrieved context
-        console.log('RAG not available, falling back to Ollama');
+        // Only use Ollama as absolute fallback
+        console.log('⚠️ RAG unavailable, using Ollama fallback. RAG status:', {
+          available: ragResponse.rag_available,
+          hasAnswer: !!ragResponse.answer,
+          answerLength: ragResponse.answer?.length || 0,
+          hasError: !!ragResponse.error,
+          sourcesCount: ragResponse.sources?.length || 0
+        });
+        
         let contextFromRAG = '';
         
-        // If RAG found some sources but couldn't generate answer, use the source content as context
+        // If RAG found sources but couldn't generate answer, use source content as context
         if (ragResponse.sources && ragResponse.sources.length > 0) {
           contextFromRAG = ragResponse.sources
-            .map(source => `From ${source.section_title}: ${source.snippet}`)
+            .map(source => `From HMRC ${source.section}: ${source.snippet.substring(0, 200)}`)
             .join('\n\n');
           sources = ragResponse.sources;
+          usedRAG = true; // Mark as RAG-enhanced since we're using RAG sources
         }
         
         const llmResponse = await this.callOllama(message, contextFromRAG);
         finalResponse = this.formatResponse(llmResponse, message);
         
-        // If we used context from RAG, mark it as partially RAG-enhanced
         if (contextFromRAG) {
-          usedRAG = true;
           finalResponse += '\n\n*This response is enhanced with official HMRC documentation.*';
         }
       }
       
-      // Format the final response
-      const formattedResponse = usedRAG ? finalResponse : this.formatResponse(finalResponse, message);
+      // Use final response as-is since it's already properly formatted
+      const formattedResponse = finalResponse;
       
       const response: ChatResponse = {
         text: formattedResponse,

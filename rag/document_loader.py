@@ -15,16 +15,14 @@ from langchain.schema import Document
 class HMRCDocumentLoader:
     """Enhanced HMRC document loader that follows internal links to build comprehensive knowledge base."""
     
-    def __init__(self, data_dir: str = "data", max_depth: int = 2, max_pages: int = 50):
+    def __init__(self, data_dir: str = "data", max_depth: int = None, max_pages: int = 1000):
         self.data_dir = data_dir
-        self.max_depth = max_depth
+        self.max_depth = max_depth  # None means no depth limit, use smart filtering instead
         self.max_pages = max_pages
         
-        # Starting URLs for HMRC employment-related securities
+        # Starting URL - main HMRC Employment-Related Securities Manual index
         self.seed_urls = [
-            "https://www.gov.uk/hmrc-internal-manuals/employment-related-securities/ersm110000",
-            "https://www.gov.uk/hmrc-internal-manuals/employment-related-securities/ersm20000", 
-            "https://www.gov.uk/hmrc-internal-manuals/employment-related-securities/ersm30000"
+            "https://www.gov.uk/hmrc-internal-manuals/employment-related-securities"
         ]
         
         # Track discovered URLs and their depth
@@ -77,7 +75,7 @@ class HMRCDocumentLoader:
         return links
     
     def _is_relevant_hmrc_link(self, url: str) -> bool:
-        """Check if URL is a relevant HMRC employment-related securities link."""
+        """Check if URL is within the HMRC Employment-Related Securities Manual."""
         # Must be gov.uk domain
         if 'gov.uk' not in url:
             return False
@@ -86,56 +84,76 @@ class HMRCDocumentLoader:
         if '/hmrc-internal-manuals/' not in url:
             return False
         
-        # Must be employment-related securities or related topics
-        relevant_patterns = [
-            '/employment-related-securities/',
-            '/ersm',  # Employment-Related Securities Manual
-            '/capital-gains-manual/',
-            '/income-tax-manual/',
-            '/share-schemes',
-            '/emi-',
-            '/csop',
-            '/saye'
-        ]
+        # Must be within employment-related-securities manual only
+        if '/employment-related-securities' not in url:
+            return False
         
-        return any(pattern in url.lower() for pattern in relevant_patterns)
+        # Exclude fragments and query parameters that don't add content
+        parsed_url = urlparse(url)
+        if parsed_url.fragment and not parsed_url.path.endswith(parsed_url.fragment):
+            # Skip pure fragment links like #content unless they're meaningful
+            if parsed_url.fragment in ['content', 'main-content', 'top']:
+                return False
+        
+        # Skip PDF and other non-HTML resources
+        if url.lower().endswith(('.pdf', '.doc', '.docx', '.xls', '.xlsx')):
+            return False
+        
+        return True
+    
+    def _clean_url(self, url: str) -> str:
+        """Clean URL by removing unnecessary fragments and parameters."""
+        from urllib.parse import urlparse, urlunparse
+        
+        parsed = urlparse(url)
+        
+        # Remove fragments that don't add content value
+        fragment = parsed.fragment
+        if fragment in ['content', 'main-content', 'top', '']:
+            fragment = ''
+        
+        # Remove query parameters (they usually don't add content in HMRC manuals)
+        query = ''
+        
+        # Reconstruct clean URL
+        clean_parsed = parsed._replace(fragment=fragment, query=query)
+        return urlunparse(clean_parsed)
     
     def discover_links(self, max_depth: int = None) -> None:
-        """Discover internal HMRC links recursively."""
-        if max_depth is None:
-            max_depth = self.max_depth
-        
+        """Comprehensively discover all HMRC Employment-Related Securities Manual links."""
         try:
             import requests
         except ImportError:
             print("❌ Requests not available. Install with: pip install requests")
             return
         
-        print(f"🔍 Discovering HMRC links (max depth: {max_depth}, max pages: {self.max_pages})...")
+        print(f"🔍 Comprehensively crawling HMRC Employment-Related Securities Manual...")
+        print(f"📋 Configuration: max_pages={self.max_pages}, smart_filtering=True")
         
-        for depth in range(max_depth + 1):
-            if len(self.discovered_urls) >= self.max_pages:
-                print(f"🛑 Reached maximum pages limit ({self.max_pages})")
+        # Use breadth-first search to ensure we don't get stuck in deep branches
+        queue = list(self.seed_urls)
+        depth = 0
+        
+        while queue and len(self.discovered_urls) < self.max_pages:
+            current_level = queue.copy()
+            queue.clear()
+            next_level_urls = set()
+            
+            if not current_level:
                 break
+                
+            print(f"\n🌐 Processing level {depth} with {len(current_level)} URLs...")
             
-            # Get URLs at current depth that haven't been processed
-            urls_at_depth = [
-                url for url, url_depth in self.discovered_urls.items() 
-                if url_depth == depth and url not in self.processed_urls
-            ]
-            
-            if not urls_at_depth:
-                print(f"📄 No more URLs at depth {depth}")
-                continue
-            
-            print(f"🌐 Processing {len(urls_at_depth)} URLs at depth {depth}...")
-            
-            for url in urls_at_depth:
+            for url in current_level:
                 if len(self.discovered_urls) >= self.max_pages:
+                    print(f"🛑 Reached maximum pages limit ({self.max_pages})")
                     break
+                    
+                if url in self.processed_urls:
+                    continue
                 
                 try:
-                    print(f"  🔗 Discovering links from: {url}")
+                    print(f"  🔗 Crawling: {url}")
                     
                     # Fetch the page
                     response = requests.get(url, headers=self.headers, timeout=30)
@@ -144,12 +162,17 @@ class HMRCDocumentLoader:
                     # Extract links
                     new_links = self.extract_hmrc_links(response.text, url)
                     
-                    # Add new links at next depth
+                    # Add new unique links for next level
                     new_count = 0
                     for link in new_links:
-                        if (link not in self.discovered_urls and 
+                        # Clean the URL (remove fragments that don't add content)
+                        clean_link = self._clean_url(link)
+                        
+                        if (clean_link not in self.discovered_urls and 
+                            clean_link not in self.processed_urls and
                             len(self.discovered_urls) < self.max_pages):
-                            self.discovered_urls[link] = depth + 1
+                            self.discovered_urls[clean_link] = depth + 1
+                            next_level_urls.add(clean_link)
                             new_count += 1
                     
                     print(f"    ✓ Found {new_count} new links")
@@ -157,26 +180,48 @@ class HMRCDocumentLoader:
                     # Mark as processed
                     self.processed_urls.add(url)
                     
-                    # Rate limiting
-                    time.sleep(1)
+                    # Rate limiting to be respectful
+                    time.sleep(0.5)
                     
                 except Exception as e:
-                    print(f"    ✗ Error discovering links from {url}: {str(e)}")
+                    print(f"    ✗ Error crawling {url}: {str(e)}")
                     self.failed_urls.append({
                         'url': url,
                         'error': str(e),
-                        'stage': 'link_discovery'
+                        'stage': 'link_discovery',
+                        'depth': depth
                     })
                     self.processed_urls.add(url)
+            
+            # Prepare next level
+            queue.extend(next_level_urls)
+            depth += 1
+            
+            # Progress report
+            print(f"    📊 Level {depth-1} complete: {len(self.discovered_urls)} total URLs discovered")
+            
+            # Safety check to prevent infinite loops
+            if depth > 20:  # Very deep nesting is unlikely in a manual
+                print(f"⚠️  Reached maximum depth safety limit (20)")
+                break
         
-        print(f"\n🎯 Discovery complete: {len(self.discovered_urls)} total URLs found")
+        print(f"\n🎯 Comprehensive crawling complete!")
+        print(f"📊 Final statistics:")
+        print(f"   • Total URLs discovered: {len(self.discovered_urls)}")
+        print(f"   • URLs processed: {len(self.processed_urls)}")
+        print(f"   • Failed URLs: {len(self.failed_urls)}")
+        print(f"   • Max depth reached: {depth-1}")
         
         # Save discovered URLs
         self._save_discovered_urls()
     
-    def load_documents(self, discover_links: bool = True) -> List[Document]:
-        """Load documents from HMRC URLs with optional link discovery."""
-        if discover_links:
+    def load_documents(self, discover_links: bool = True, url_list: List[str] = None) -> List[Document]:
+        """Load documents from HMRC URLs with optional link discovery or predefined URL list."""
+        if url_list:
+            # Use predefined URL list instead of discovery
+            self.discovered_urls = {url: 0 for url in url_list}
+            print(f"📋 Using predefined URL list with {len(url_list)} URLs")
+        elif discover_links:
             self.discover_links()
         
         all_documents = []
@@ -347,12 +392,13 @@ class HMRCDocumentLoader:
     
     def process_all(self, save_filename: str = None, discover_links: bool = True) -> List[Document]:
         """Complete pipeline: discover links, load, split, and save documents."""
-        print("🚀 === HMRC Document Processing Pipeline (Enhanced) ===")
+        print("🚀 === HMRC Document Processing Pipeline (Comprehensive) ===")
         print(f"📋 Configuration:")
-        print(f"   • Max depth: {self.max_depth}")
+        print(f"   • Crawling strategy: Comprehensive (no depth limits)")
         print(f"   • Max pages: {self.max_pages}")
+        print(f"   • Smart filtering: Employment-Related Securities Manual only")
         print(f"   • Link discovery: {discover_links}")
-        print(f"   • Seed URLs: {len(self.seed_urls)}")
+        print(f"   • Starting URL: {self.seed_urls[0]}")
         
         try:
             # Load documents (with optional link discovery)
@@ -484,8 +530,8 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description='Enhanced HMRC Document Loader')
-    parser.add_argument('--max-depth', type=int, default=2, help='Maximum crawling depth')
-    parser.add_argument('--max-pages', type=int, default=50, help='Maximum pages to crawl')
+    parser.add_argument('--max-depth', type=int, default=None, help='Maximum crawling depth (None for unlimited)')
+    parser.add_argument('--max-pages', type=int, default=1000, help='Maximum pages to crawl')
     parser.add_argument('--no-discovery', action='store_true', help='Disable link discovery')
     parser.add_argument('--data-dir', default='data', help='Data directory')
     
