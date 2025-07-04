@@ -1,11 +1,17 @@
 import express from 'express';
-import { ChatService } from '../services/ChatService';
+import { SimpleChatService } from '../services/SimpleChatService';
 
 const router = express.Router();
-const chatService = new ChatService();
+let chatService: SimpleChatService;
 
 router.post('/message', async (req, res) => {
   try {
+    // Initialize ChatService lazily to avoid startup crashes
+    if (!chatService) {
+      console.log('Initializing SimpleChatService...');
+      chatService = new SimpleChatService();
+    }
+    
     const { message, context } = req.body;
     
     if (!message || typeof message !== 'string') {
@@ -28,8 +34,16 @@ router.post('/message', async (req, res) => {
 });
 
 router.get('/topics', (req, res) => {
-  const topics = chatService.getAvailableTopics();
-  res.json({ topics });
+  try {
+    if (!chatService) {
+      chatService = new SimpleChatService();
+    }
+    const topics = chatService.getAvailableTopics();
+    res.json({ topics });
+  } catch (error) {
+    console.error('Topics error:', error);
+    res.status(500).json({ error: 'Failed to get topics' });
+  }
 });
 
 export default router;

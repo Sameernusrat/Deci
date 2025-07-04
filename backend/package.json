@@ -5,7 +5,11 @@
   "main": "dist/server.js",
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/server-enhanced.ts",
+    "dev:diagnostic": "ts-node-dev --respawn --transpile-only src/server-diagnostic.backup.ts",
+    "dev:enhanced": "ts-node-dev --respawn --transpile-only src/server-enhanced.ts",
+    "dev:minimal": "ts-node-dev --respawn --transpile-only src/server-minimal.ts",
+    "dev:old": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
     "test": "jest"
   },
@@ -24,7 +28,11 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.18.0",
-    "helmet": "^6.0.0"
+    "express-rate-limit": "^7.5.1",
+    "express-slow-down": "^2.1.0",
+    "helmet": "^6.0.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.0",

@@ -208,12 +208,23 @@ EMI = Enterprise Management Incentives (NOT EML)`;
         headers: {
           'Content-Type': 'application/json',
         },
-        timeout: 60000
+        timeout: 120000 // Increase to 2 minutes for complex queries
       });
 
       return response.data.response;
     } catch (error) {
       console.error('Error calling Ollama API:', error);
+      
+      // Provide a more graceful fallback for timeout errors
+      if ((error as any).code === 'ECONNABORTED' || (error as any).message?.includes('timeout')) {
+        throw new Error('The AI service is taking longer than expected. Please try a simpler question or try again later.');
+      }
+      
+      // For connection errors, provide helpful message
+      if ((error as any).code === 'ECONNREFUSED') {
+        throw new Error('The AI service is not available. Please ensure Ollama is running and try again.');
+      }
+      
       throw error;
     }
   }
@@ -311,16 +322,19 @@ EMI = Enterprise Management Incentives (NOT EML)`;
 
   async processMessage(message: string, context?: any): Promise<ChatResponse> {
     try {
+      console.log('Processing message:', message);
+      
       // Step 1: Try to get information from RAG system first
       console.log('Processing message with RAG-enhanced pipeline');
       const ragResponse = await this.callRAG(message);
+      console.log('RAG response received:', ragResponse.rag_available);
       
       let finalResponse: string;
       let usedRAG = false;
       let sources: any[] = [];
       
-      // Prioritize RAG responses - use RAG if we have any meaningful answer
-      if (ragResponse.rag_available && ragResponse.answer && ragResponse.answer.trim().length > 20 && !ragResponse.error) {
+      // Prioritize RAG responses - use RAG if available and has content
+      if (ragResponse.rag_available && ragResponse.answer && ragResponse.answer.trim().length > 10 && !ragResponse.fallback_mode) {
         // RAG system provided a good answer - use it directly
         console.log('✅ Using RAG-based response with', ragResponse.sources?.length || 0, 'sources');
         finalResponse = ragResponse.answer;
@@ -346,8 +360,8 @@ EMI = Enterprise Management Incentives (NOT EML)`;
         // If RAG found sources but couldn't generate answer, use source content as context
         if (ragResponse.sources && ragResponse.sources.length > 0) {
           contextFromRAG = ragResponse.sources
-            .map(source => `From HMRC ${source.section}: ${source.snippet.substring(0, 200)}`)
-            .join('\n\n');
+            .map(source => `From HMRC ${source.section_title || source.section}:\n${source.snippet}`)
+            .join('\n\n---\n\n');
           sources = ragResponse.sources;
           usedRAG = true; // Mark as RAG-enhanced since we're using RAG sources
         }
@@ -378,10 +392,21 @@ EMI = Enterprise Management Incentives (NOT EML)`;
       return response;
       
     } catch (error) {
-      console.error('Error processing message:', error);
+      console.error('Error processing message with LLM:', error);
       
-      return {
-        text: `I apologize, but I'm having trouble processing your request right now. However, I can still help with general equity and tax questions.
+      // Provide specific error messages based on error type
+      let errorMessage = `I apologize, but I encountered an issue processing your request.`;
+      
+      if ((error as any).message?.includes('timeout') || (error as any).message?.includes('longer than expected')) {
+        errorMessage = `The AI service is taking longer than usual. This sometimes happens with complex queries. Please try:
+
+• Asking a more specific question
+• Breaking your question into smaller parts
+• Trying again in a moment`;
+      } else if ((error as any).message?.includes('not available') || (error as any).message?.includes('Ollama')) {
+        errorMessage = `The AI service is temporarily unavailable. The system will attempt to restart automatically.`;
+      } else {
+        errorMessage += ` However, I can still help with general equity and tax questions.
 
 I specialize in:
 • EMI schemes and eligibility
@@ -390,9 +415,11 @@ I specialize in:
 • Income tax implications
 • Business Asset Disposal Relief
 • Tax planning strategies
-• Share valuations
-
-Please try your question again, or contact support if the issue persists.`,
+• Share valuations`;
+      }
+      
+      return {
+        text: errorMessage,
         suggestions: [
           'Tell me about EMI schemes',
           'What are the different share option schemes?',
