@@ -1,0 +1,50 @@
+{
+  "total_documents": 178,
+  "total_characters": 161019,
+  "average_chunk_size": 904.6011235955057,
+  "source_urls_count": 26,
+  "unique_sections": 26,
+  "depth_distribution": {
+    "0": 178
+  },
+  "section_distribution": {
+    "hmrc-internal-manuals_employment-related-securities": 7,
+    "ersm10000": 6,
+    "ersm600000": 7,
+    "ersm100000": 7,
+    "ersm162000": 7,
+    "ersm200000": 6,
+    "ersm160000": 7,
+    "ersm110000": 7,
+    "ersm190000": 6,
+    "ersm60000": 7,
+    "ersm170000": 7,
+    "ersm90000": 6,
+    "ersm70000": 8,
+    "ersm01000": 6,
+    "ersm40000": 6,
+    "ersm220000": 6,
+    "ersm300000": 8,
+    "employment-related-securities_updates": 10,
+    "ersm30000": 10,
+    "ersm210000": 5,
+    "ersm180000": 6,
+    "ersm140000": 6,
+    "ersm165000": 6,
+    "ersm80000": 6,
+    "ersm20000": 9,
+    "ersm50000": 6
+  },
+  "discovery_stats": {
+    "max_depth": null,
+    "max_pages": 26,
+    "total_discovered_urls": 26,
+    "failed_urls": 0
+  },
+  "created_at": "2025-07-01T08:22:49.990397",
+  "files": {
+    "pickle": "data/hmrc_priority_batch.pkl",
+    "json": "data/hmrc_priority_batch.json",
+    "summary": "data/hmrc_priority_batch_summary.json"
+  }
+}

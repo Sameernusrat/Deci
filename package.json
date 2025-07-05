@@ -6,7 +6,12 @@
   "scripts": {
     "dev:frontend": "cd frontend && npm start",
     "dev:backend": "cd backend && npm run dev",
-    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev": "node server-manager.js start",
+    "dev:old": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "servers:start": "node server-manager.js start",
+    "servers:stop": "node server-manager.js stop",
+    "servers:restart": "node server-manager.js restart",
+    "servers:status": "node server-manager.js status",
     "build:frontend": "cd frontend && npm run build",
     "build:backend": "cd backend && npm run build",
     "build": "npm run build:backend && npm run build:frontend",
@@ -29,6 +34,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^7.6.0",
+    "pm2": "^6.0.8"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "total_documents": 26,
+  "total_characters": 24344,
+  "average_chunk_size": 936.3076923076923,
+  "source_urls": [
+    "https://www.gov.uk/hmrc-internal-manuals/employment-related-securities/ersm110000",
+    "https://www.gov.uk/hmrc-internal-manuals/employment-related-securities/ersm30000",
+    "https://www.gov.uk/hmrc-internal-manuals/employment-related-securities/ersm20000"
+  ],
+  "created_at": "2025-06-30T19:13:49.200729",
+  "files": {
+    "pickle": "data/hmrc_docs_20250630_191349.pkl",
+    "json": "data/hmrc_docs_20250630_191349.json",
+    "summary": "data/hmrc_docs_20250630_191349_summary.json"
+  }
+}

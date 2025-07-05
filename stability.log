@@ -1,0 +1,1137 @@
+[2025-07-03 18:28:49] [INFO] Starting 24-hour backend stability test
+[0;34m[2025-07-03 18:28:49] [INFO] Starting 24-hour backend stability test[0m
+[2025-07-03 18:28:49] [INFO] Health checks every 5 minutes, Chat tests every 30 minutes
+[0;34m[2025-07-03 18:28:49] [INFO] Health checks every 5 minutes, Chat tests every 30 minutes[0m
+[2025-07-03 18:28:49] [INFO] Press Ctrl+C to stop
+[0;34m[2025-07-03 18:28:49] [INFO] Press Ctrl+C to stop[0m
+[2025-07-03 18:28:49] [INFO] === Iteration 1 (0h elapsed) ===
+[0;34m[2025-07-03 18:28:49] [INFO] === Iteration 1 (0h elapsed) ===[0m
+[2025-07-03 18:28:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 18:28:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 18:28:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 18:28:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 18:33:50] [INFO] === Iteration 2 (0h elapsed) ===
+[0;34m[2025-07-03 18:33:50] [INFO] === Iteration 2 (0h elapsed) ===[0m
+[2025-07-03 18:33:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 18:33:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 18:33:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 18:33:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 18:38:50] [INFO] === Iteration 3 (0h elapsed) ===
+[0;34m[2025-07-03 18:38:50] [INFO] === Iteration 3 (0h elapsed) ===[0m
+[2025-07-03 18:38:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 18:38:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 18:38:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 18:38:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 18:43:50] [INFO] === Iteration 4 (0h elapsed) ===
+[0;34m[2025-07-03 18:43:50] [INFO] === Iteration 4 (0h elapsed) ===[0m
+[2025-07-03 18:43:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 18:43:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 18:43:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 18:43:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 18:48:50] [INFO] === Iteration 5 (0h elapsed) ===
+[0;34m[2025-07-03 18:48:50] [INFO] === Iteration 5 (0h elapsed) ===[0m
+[2025-07-03 18:48:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 18:48:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 18:48:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 18:48:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 18:53:50] [INFO] === Iteration 6 (0h elapsed) ===
+[0;34m[2025-07-03 18:53:50] [INFO] === Iteration 6 (0h elapsed) ===[0m
+[2025-07-03 18:53:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 18:53:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 18:54:12] [SUCCESS] Chat test passed - Response: 389 chars, RAG: true, Duration: 22s
+[0;32m[2025-07-03 18:54:12] [SUCCESS] Chat test passed - Response: 389 chars, RAG: true, Duration: 22s[0m
+[2025-07-03 18:54:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 18:54:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 18:59:12] [INFO] === Iteration 7 (0h elapsed) ===
+[0;34m[2025-07-03 18:59:12] [INFO] === Iteration 7 (0h elapsed) ===[0m
+[2025-07-03 18:59:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 18:59:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 18:59:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 18:59:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:04:12] [INFO] === Iteration 8 (0h elapsed) ===
+[0;34m[2025-07-03 19:04:12] [INFO] === Iteration 8 (0h elapsed) ===[0m
+[2025-07-03 19:04:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:04:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:04:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:04:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:09:12] [INFO] === Iteration 9 (0h elapsed) ===
+[0;34m[2025-07-03 19:09:12] [INFO] === Iteration 9 (0h elapsed) ===[0m
+[2025-07-03 19:09:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:09:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:09:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:09:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:14:12] [INFO] === Iteration 10 (0h elapsed) ===
+[0;34m[2025-07-03 19:14:12] [INFO] === Iteration 10 (0h elapsed) ===[0m
+[2025-07-03 19:14:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:14:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:14:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:14:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:19:12] [INFO] === Iteration 11 (0h elapsed) ===
+[0;34m[2025-07-03 19:19:12] [INFO] === Iteration 11 (0h elapsed) ===[0m
+[2025-07-03 19:19:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:19:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:19:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:19:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:24:12] [INFO] === Iteration 12 (0h elapsed) ===
+[0;34m[2025-07-03 19:24:12] [INFO] === Iteration 12 (0h elapsed) ===[0m
+[2025-07-03 19:24:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:24:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:24:32] [SUCCESS] Chat test passed - Response: 522 chars, RAG: true, Duration: 20s
+[0;32m[2025-07-03 19:24:32] [SUCCESS] Chat test passed - Response: 522 chars, RAG: true, Duration: 20s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-03 19:24:33] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-03 19:24:33] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-03 19:24:33] [INFO] HOURLY SUMMARY - Health: 12/12 (100%), Chat: 2/2 (100%)
+[0;34m[2025-07-03 19:24:33] [INFO] HOURLY SUMMARY - Health: 12/12 (100%), Chat: 2/2 (100%)[0m
+[2025-07-03 19:24:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:24:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:29:33] [INFO] === Iteration 13 (1h elapsed) ===
+[0;34m[2025-07-03 19:29:33] [INFO] === Iteration 13 (1h elapsed) ===[0m
+[2025-07-03 19:29:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:29:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:29:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:29:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:34:33] [INFO] === Iteration 14 (1h elapsed) ===
+[0;34m[2025-07-03 19:34:33] [INFO] === Iteration 14 (1h elapsed) ===[0m
+[2025-07-03 19:34:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:34:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:34:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:34:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:39:33] [INFO] === Iteration 15 (1h elapsed) ===
+[0;34m[2025-07-03 19:39:33] [INFO] === Iteration 15 (1h elapsed) ===[0m
+[2025-07-03 19:39:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:39:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:39:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:39:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:44:33] [INFO] === Iteration 16 (1h elapsed) ===
+[0;34m[2025-07-03 19:44:33] [INFO] === Iteration 16 (1h elapsed) ===[0m
+[2025-07-03 19:44:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:44:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:44:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:44:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:49:33] [INFO] === Iteration 17 (1h elapsed) ===
+[0;34m[2025-07-03 19:49:33] [INFO] === Iteration 17 (1h elapsed) ===[0m
+[2025-07-03 19:49:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:49:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:49:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:49:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:54:33] [INFO] === Iteration 18 (1h elapsed) ===
+[0;34m[2025-07-03 19:54:33] [INFO] === Iteration 18 (1h elapsed) ===[0m
+[2025-07-03 19:54:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:54:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:54:54] [SUCCESS] Chat test passed - Response: 531 chars, RAG: true, Duration: 21s
+[0;32m[2025-07-03 19:54:54] [SUCCESS] Chat test passed - Response: 531 chars, RAG: true, Duration: 21s[0m
+[2025-07-03 19:54:54] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:54:54] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 19:59:54] [INFO] === Iteration 19 (1h elapsed) ===
+[0;34m[2025-07-03 19:59:54] [INFO] === Iteration 19 (1h elapsed) ===[0m
+[2025-07-03 19:59:54] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 19:59:54] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 19:59:54] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 19:59:54] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:04:54] [INFO] === Iteration 20 (1h elapsed) ===
+[0;34m[2025-07-03 20:04:54] [INFO] === Iteration 20 (1h elapsed) ===[0m
+[2025-07-03 20:04:54] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:04:54] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:04:54] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:04:54] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:09:54] [INFO] === Iteration 21 (1h elapsed) ===
+[0;34m[2025-07-03 20:09:54] [INFO] === Iteration 21 (1h elapsed) ===[0m
+[2025-07-03 20:09:54] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:09:54] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:09:54] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:09:54] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:14:54] [INFO] === Iteration 22 (1h elapsed) ===
+[0;34m[2025-07-03 20:14:54] [INFO] === Iteration 22 (1h elapsed) ===[0m
+[2025-07-03 20:14:54] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:14:54] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:14:54] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:14:54] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:19:54] [INFO] === Iteration 23 (1h elapsed) ===
+[0;34m[2025-07-03 20:19:54] [INFO] === Iteration 23 (1h elapsed) ===[0m
+[2025-07-03 20:19:54] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:19:54] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:19:54] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:19:54] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:24:54] [INFO] === Iteration 24 (1h elapsed) ===
+[0;34m[2025-07-03 20:24:54] [INFO] === Iteration 24 (1h elapsed) ===[0m
+[2025-07-03 20:24:54] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:24:54] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:25:13] [SUCCESS] Chat test passed - Response: 544 chars, RAG: true, Duration: 19s
+[0;32m[2025-07-03 20:25:13] [SUCCESS] Chat test passed - Response: 544 chars, RAG: true, Duration: 19s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-03 20:25:13] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-03 20:25:13] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-03 20:25:13] [INFO] HOURLY SUMMARY - Health: 24/24 (100%), Chat: 4/4 (100%)
+[0;34m[2025-07-03 20:25:13] [INFO] HOURLY SUMMARY - Health: 24/24 (100%), Chat: 4/4 (100%)[0m
+[2025-07-03 20:25:13] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:25:13] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:30:13] [INFO] === Iteration 25 (2h elapsed) ===
+[0;34m[2025-07-03 20:30:13] [INFO] === Iteration 25 (2h elapsed) ===[0m
+[2025-07-03 20:30:14] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:30:14] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:30:14] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:30:14] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:35:14] [INFO] === Iteration 26 (2h elapsed) ===
+[0;34m[2025-07-03 20:35:14] [INFO] === Iteration 26 (2h elapsed) ===[0m
+[2025-07-03 20:35:14] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:35:14] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:35:14] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:35:14] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:40:14] [INFO] === Iteration 27 (2h elapsed) ===
+[0;34m[2025-07-03 20:40:14] [INFO] === Iteration 27 (2h elapsed) ===[0m
+[2025-07-03 20:40:14] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:40:14] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:40:14] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:40:14] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:45:14] [INFO] === Iteration 28 (2h elapsed) ===
+[0;34m[2025-07-03 20:45:14] [INFO] === Iteration 28 (2h elapsed) ===[0m
+[2025-07-03 20:45:14] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:45:14] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:45:14] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:45:14] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:50:14] [INFO] === Iteration 29 (2h elapsed) ===
+[0;34m[2025-07-03 20:50:14] [INFO] === Iteration 29 (2h elapsed) ===[0m
+[2025-07-03 20:50:14] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:50:14] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:50:14] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:50:14] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 20:55:14] [INFO] === Iteration 30 (2h elapsed) ===
+[0;34m[2025-07-03 20:55:14] [INFO] === Iteration 30 (2h elapsed) ===[0m
+[2025-07-03 20:55:14] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 20:55:14] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 20:55:32] [SUCCESS] Chat test passed - Response: 436 chars, RAG: true, Duration: 18s
+[0;32m[2025-07-03 20:55:32] [SUCCESS] Chat test passed - Response: 436 chars, RAG: true, Duration: 18s[0m
+[2025-07-03 20:55:32] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 20:55:32] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:00:32] [INFO] === Iteration 31 (2h elapsed) ===
+[0;34m[2025-07-03 21:00:32] [INFO] === Iteration 31 (2h elapsed) ===[0m
+[2025-07-03 21:00:32] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:00:32] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:00:32] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:00:32] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:05:33] [INFO] === Iteration 32 (2h elapsed) ===
+[0;34m[2025-07-03 21:05:33] [INFO] === Iteration 32 (2h elapsed) ===[0m
+[2025-07-03 21:05:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:05:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:05:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:05:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:10:33] [INFO] === Iteration 33 (2h elapsed) ===
+[0;34m[2025-07-03 21:10:33] [INFO] === Iteration 33 (2h elapsed) ===[0m
+[2025-07-03 21:10:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:10:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:10:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:10:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:15:33] [INFO] === Iteration 34 (2h elapsed) ===
+[0;34m[2025-07-03 21:15:33] [INFO] === Iteration 34 (2h elapsed) ===[0m
+[2025-07-03 21:15:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:15:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:15:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:15:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:20:33] [INFO] === Iteration 35 (2h elapsed) ===
+[0;34m[2025-07-03 21:20:33] [INFO] === Iteration 35 (2h elapsed) ===[0m
+[2025-07-03 21:20:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:20:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:20:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:20:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:25:33] [INFO] === Iteration 36 (2h elapsed) ===
+[0;34m[2025-07-03 21:25:33] [INFO] === Iteration 36 (2h elapsed) ===[0m
+[2025-07-03 21:25:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:25:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:25:51] [SUCCESS] Chat test passed - Response: 535 chars, RAG: true, Duration: 18s
+[0;32m[2025-07-03 21:25:51] [SUCCESS] Chat test passed - Response: 535 chars, RAG: true, Duration: 18s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-03 21:25:51] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-03 21:25:51] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-03 21:25:51] [INFO] HOURLY SUMMARY - Health: 36/36 (100%), Chat: 6/6 (100%)
+[0;34m[2025-07-03 21:25:51] [INFO] HOURLY SUMMARY - Health: 36/36 (100%), Chat: 6/6 (100%)[0m
+[2025-07-03 21:25:51] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:25:51] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:30:51] [INFO] === Iteration 37 (3h elapsed) ===
+[0;34m[2025-07-03 21:30:51] [INFO] === Iteration 37 (3h elapsed) ===[0m
+[2025-07-03 21:30:51] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:30:51] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:30:51] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:30:51] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:35:51] [INFO] === Iteration 38 (3h elapsed) ===
+[0;34m[2025-07-03 21:35:51] [INFO] === Iteration 38 (3h elapsed) ===[0m
+[2025-07-03 21:35:51] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:35:51] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:35:51] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:35:51] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:40:51] [INFO] === Iteration 39 (3h elapsed) ===
+[0;34m[2025-07-03 21:40:51] [INFO] === Iteration 39 (3h elapsed) ===[0m
+[2025-07-03 21:40:52] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:40:52] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:40:52] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:40:52] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:45:52] [INFO] === Iteration 40 (3h elapsed) ===
+[0;34m[2025-07-03 21:45:52] [INFO] === Iteration 40 (3h elapsed) ===[0m
+[2025-07-03 21:45:52] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:45:52] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:45:52] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:45:52] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:50:52] [INFO] === Iteration 41 (3h elapsed) ===
+[0;34m[2025-07-03 21:50:52] [INFO] === Iteration 41 (3h elapsed) ===[0m
+[2025-07-03 21:50:52] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:50:52] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:50:52] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:50:52] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 21:55:52] [INFO] === Iteration 42 (3h elapsed) ===
+[0;34m[2025-07-03 21:55:52] [INFO] === Iteration 42 (3h elapsed) ===[0m
+[2025-07-03 21:55:52] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 21:55:52] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 21:56:12] [SUCCESS] Chat test passed - Response: 804 chars, RAG: true, Duration: 20s
+[0;32m[2025-07-03 21:56:12] [SUCCESS] Chat test passed - Response: 804 chars, RAG: true, Duration: 20s[0m
+[2025-07-03 21:56:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 21:56:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:01:12] [INFO] === Iteration 43 (3h elapsed) ===
+[0;34m[2025-07-03 22:01:12] [INFO] === Iteration 43 (3h elapsed) ===[0m
+[2025-07-03 22:01:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:01:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:01:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:01:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:06:12] [INFO] === Iteration 44 (3h elapsed) ===
+[0;34m[2025-07-03 22:06:12] [INFO] === Iteration 44 (3h elapsed) ===[0m
+[2025-07-03 22:06:13] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:06:13] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:06:13] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:06:13] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:11:13] [INFO] === Iteration 45 (3h elapsed) ===
+[0;34m[2025-07-03 22:11:13] [INFO] === Iteration 45 (3h elapsed) ===[0m
+[2025-07-03 22:11:13] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:11:13] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:11:13] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:11:13] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:16:13] [INFO] === Iteration 46 (3h elapsed) ===
+[0;34m[2025-07-03 22:16:13] [INFO] === Iteration 46 (3h elapsed) ===[0m
+[2025-07-03 22:16:13] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:16:13] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:16:13] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:16:13] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:21:13] [INFO] === Iteration 47 (3h elapsed) ===
+[0;34m[2025-07-03 22:21:13] [INFO] === Iteration 47 (3h elapsed) ===[0m
+[2025-07-03 22:21:13] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:21:13] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:21:13] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:21:13] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:26:13] [INFO] === Iteration 48 (3h elapsed) ===
+[0;34m[2025-07-03 22:26:13] [INFO] === Iteration 48 (3h elapsed) ===[0m
+[2025-07-03 22:26:13] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:26:13] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:26:31] [SUCCESS] Chat test passed - Response: 477 chars, RAG: true, Duration: 18s
+[0;32m[2025-07-03 22:26:31] [SUCCESS] Chat test passed - Response: 477 chars, RAG: true, Duration: 18s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-03 22:26:31] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-03 22:26:31] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-03 22:26:31] [INFO] HOURLY SUMMARY - Health: 48/48 (100%), Chat: 8/8 (100%)
+[0;34m[2025-07-03 22:26:31] [INFO] HOURLY SUMMARY - Health: 48/48 (100%), Chat: 8/8 (100%)[0m
+[2025-07-03 22:26:31] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:26:31] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:31:31] [INFO] === Iteration 49 (4h elapsed) ===
+[0;34m[2025-07-03 22:31:31] [INFO] === Iteration 49 (4h elapsed) ===[0m
+[2025-07-03 22:31:31] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:31:31] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:31:31] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:31:31] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:36:31] [INFO] === Iteration 50 (4h elapsed) ===
+[0;34m[2025-07-03 22:36:31] [INFO] === Iteration 50 (4h elapsed) ===[0m
+[2025-07-03 22:36:31] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:36:31] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:36:31] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:36:31] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:41:31] [INFO] === Iteration 51 (4h elapsed) ===
+[0;34m[2025-07-03 22:41:31] [INFO] === Iteration 51 (4h elapsed) ===[0m
+[2025-07-03 22:41:31] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:41:31] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:41:31] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:41:31] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:46:31] [INFO] === Iteration 52 (4h elapsed) ===
+[0;34m[2025-07-03 22:46:31] [INFO] === Iteration 52 (4h elapsed) ===[0m
+[2025-07-03 22:46:31] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:46:31] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:46:31] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:46:31] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:51:31] [INFO] === Iteration 53 (4h elapsed) ===
+[0;34m[2025-07-03 22:51:31] [INFO] === Iteration 53 (4h elapsed) ===[0m
+[2025-07-03 22:51:31] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:51:31] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:51:31] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:51:31] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 22:56:31] [INFO] === Iteration 54 (4h elapsed) ===
+[0;34m[2025-07-03 22:56:31] [INFO] === Iteration 54 (4h elapsed) ===[0m
+[2025-07-03 22:56:31] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 22:56:31] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 22:57:11] [SUCCESS] Chat test passed - Response: 2072 chars, RAG: true, Duration: 40s
+[0;32m[2025-07-03 22:57:11] [SUCCESS] Chat test passed - Response: 2072 chars, RAG: true, Duration: 40s[0m
+[2025-07-03 22:57:11] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 22:57:11] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:02:11] [INFO] === Iteration 55 (4h elapsed) ===
+[0;34m[2025-07-03 23:02:11] [INFO] === Iteration 55 (4h elapsed) ===[0m
+[2025-07-03 23:02:11] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:02:11] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:02:11] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:02:11] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:07:11] [INFO] === Iteration 56 (4h elapsed) ===
+[0;34m[2025-07-03 23:07:11] [INFO] === Iteration 56 (4h elapsed) ===[0m
+[2025-07-03 23:07:11] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:07:11] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:07:11] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:07:11] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:12:11] [INFO] === Iteration 57 (4h elapsed) ===
+[0;34m[2025-07-03 23:12:11] [INFO] === Iteration 57 (4h elapsed) ===[0m
+[2025-07-03 23:12:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:12:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:12:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:12:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:17:12] [INFO] === Iteration 58 (4h elapsed) ===
+[0;34m[2025-07-03 23:17:12] [INFO] === Iteration 58 (4h elapsed) ===[0m
+[2025-07-03 23:17:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:17:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:17:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:17:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:22:12] [INFO] === Iteration 59 (4h elapsed) ===
+[0;34m[2025-07-03 23:22:12] [INFO] === Iteration 59 (4h elapsed) ===[0m
+[2025-07-03 23:22:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:22:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:22:12] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:22:12] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:27:12] [INFO] === Iteration 60 (4h elapsed) ===
+[0;34m[2025-07-03 23:27:12] [INFO] === Iteration 60 (4h elapsed) ===[0m
+[2025-07-03 23:27:12] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:27:12] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:27:33] [SUCCESS] Chat test passed - Response: 666 chars, RAG: true, Duration: 21s
+[0;32m[2025-07-03 23:27:33] [SUCCESS] Chat test passed - Response: 666 chars, RAG: true, Duration: 21s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-03 23:27:33] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-03 23:27:33] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-03 23:27:33] [INFO] HOURLY SUMMARY - Health: 60/60 (100%), Chat: 10/10 (100%)
+[0;34m[2025-07-03 23:27:33] [INFO] HOURLY SUMMARY - Health: 60/60 (100%), Chat: 10/10 (100%)[0m
+[2025-07-03 23:27:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:27:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:32:33] [INFO] === Iteration 61 (5h elapsed) ===
+[0;34m[2025-07-03 23:32:33] [INFO] === Iteration 61 (5h elapsed) ===[0m
+[2025-07-03 23:32:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:32:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:32:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:32:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:37:33] [INFO] === Iteration 62 (5h elapsed) ===
+[0;34m[2025-07-03 23:37:33] [INFO] === Iteration 62 (5h elapsed) ===[0m
+[2025-07-03 23:37:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:37:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:37:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:37:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:42:33] [INFO] === Iteration 63 (5h elapsed) ===
+[0;34m[2025-07-03 23:42:33] [INFO] === Iteration 63 (5h elapsed) ===[0m
+[2025-07-03 23:42:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:42:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:42:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:42:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:47:33] [INFO] === Iteration 64 (5h elapsed) ===
+[0;34m[2025-07-03 23:47:33] [INFO] === Iteration 64 (5h elapsed) ===[0m
+[2025-07-03 23:47:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:47:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:47:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:47:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:52:33] [INFO] === Iteration 65 (5h elapsed) ===
+[0;34m[2025-07-03 23:52:33] [INFO] === Iteration 65 (5h elapsed) ===[0m
+[2025-07-03 23:52:33] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:52:33] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:52:33] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:52:33] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-03 23:57:33] [INFO] === Iteration 66 (5h elapsed) ===
+[0;34m[2025-07-03 23:57:33] [INFO] === Iteration 66 (5h elapsed) ===[0m
+[2025-07-03 23:57:34] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-03 23:57:34] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-03 23:57:51] [SUCCESS] Chat test passed - Response: 480 chars, RAG: true, Duration: 17s
+[0;32m[2025-07-03 23:57:51] [SUCCESS] Chat test passed - Response: 480 chars, RAG: true, Duration: 17s[0m
+[2025-07-03 23:57:51] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-03 23:57:51] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:02:51] [INFO] === Iteration 67 (5h elapsed) ===
+[0;34m[2025-07-04 00:02:51] [INFO] === Iteration 67 (5h elapsed) ===[0m
+[2025-07-04 00:02:51] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:02:51] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:02:51] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:02:51] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:07:51] [INFO] === Iteration 68 (5h elapsed) ===
+[0;34m[2025-07-04 00:07:51] [INFO] === Iteration 68 (5h elapsed) ===[0m
+[2025-07-04 00:07:51] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:07:51] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:07:51] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:07:51] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:12:51] [INFO] === Iteration 69 (5h elapsed) ===
+[0;34m[2025-07-04 00:12:51] [INFO] === Iteration 69 (5h elapsed) ===[0m
+[2025-07-04 00:12:51] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:12:51] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:12:51] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:12:51] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:17:51] [INFO] === Iteration 70 (5h elapsed) ===
+[0;34m[2025-07-04 00:17:51] [INFO] === Iteration 70 (5h elapsed) ===[0m
+[2025-07-04 00:17:51] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:17:51] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:17:51] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:17:51] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:22:51] [INFO] === Iteration 71 (5h elapsed) ===
+[0;34m[2025-07-04 00:22:51] [INFO] === Iteration 71 (5h elapsed) ===[0m
+[2025-07-04 00:22:52] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:22:52] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:22:52] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:22:52] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:27:52] [INFO] === Iteration 72 (5h elapsed) ===
+[0;34m[2025-07-04 00:27:52] [INFO] === Iteration 72 (5h elapsed) ===[0m
+[2025-07-04 00:27:52] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:27:52] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:28:09] [SUCCESS] Chat test passed - Response: 522 chars, RAG: true, Duration: 17s
+[0;32m[2025-07-04 00:28:09] [SUCCESS] Chat test passed - Response: 522 chars, RAG: true, Duration: 17s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-04 00:28:09] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-04 00:28:09] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-04 00:28:09] [INFO] HOURLY SUMMARY - Health: 72/72 (100%), Chat: 12/12 (100%)
+[0;34m[2025-07-04 00:28:09] [INFO] HOURLY SUMMARY - Health: 72/72 (100%), Chat: 12/12 (100%)[0m
+[2025-07-04 00:28:09] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:28:09] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:33:09] [INFO] === Iteration 73 (6h elapsed) ===
+[0;34m[2025-07-04 00:33:09] [INFO] === Iteration 73 (6h elapsed) ===[0m
+[2025-07-04 00:33:10] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:33:10] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:33:10] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:33:10] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:38:10] [INFO] === Iteration 74 (6h elapsed) ===
+[0;34m[2025-07-04 00:38:10] [INFO] === Iteration 74 (6h elapsed) ===[0m
+[2025-07-04 00:38:10] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:38:10] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:38:10] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:38:10] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:43:10] [INFO] === Iteration 75 (6h elapsed) ===
+[0;34m[2025-07-04 00:43:10] [INFO] === Iteration 75 (6h elapsed) ===[0m
+[2025-07-04 00:43:10] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:43:10] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:43:10] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:43:10] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:48:10] [INFO] === Iteration 76 (6h elapsed) ===
+[0;34m[2025-07-04 00:48:10] [INFO] === Iteration 76 (6h elapsed) ===[0m
+[2025-07-04 00:48:10] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:48:10] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:48:10] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:48:10] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:53:10] [INFO] === Iteration 77 (6h elapsed) ===
+[0;34m[2025-07-04 00:53:10] [INFO] === Iteration 77 (6h elapsed) ===[0m
+[2025-07-04 00:53:10] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:53:10] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:53:10] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:53:10] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 00:58:10] [INFO] === Iteration 78 (6h elapsed) ===
+[0;34m[2025-07-04 00:58:10] [INFO] === Iteration 78 (6h elapsed) ===[0m
+[2025-07-04 00:58:10] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 00:58:10] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 00:58:29] [SUCCESS] Chat test passed - Response: 623 chars, RAG: true, Duration: 19s
+[0;32m[2025-07-04 00:58:29] [SUCCESS] Chat test passed - Response: 623 chars, RAG: true, Duration: 19s[0m
+[2025-07-04 00:58:29] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 00:58:29] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:03:29] [INFO] === Iteration 79 (6h elapsed) ===
+[0;34m[2025-07-04 01:03:29] [INFO] === Iteration 79 (6h elapsed) ===[0m
+[2025-07-04 01:03:29] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:03:29] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:03:29] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:03:29] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:08:29] [INFO] === Iteration 80 (6h elapsed) ===
+[0;34m[2025-07-04 01:08:29] [INFO] === Iteration 80 (6h elapsed) ===[0m
+[2025-07-04 01:08:29] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:08:29] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:08:29] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:08:29] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:13:29] [INFO] === Iteration 81 (6h elapsed) ===
+[0;34m[2025-07-04 01:13:29] [INFO] === Iteration 81 (6h elapsed) ===[0m
+[2025-07-04 01:13:29] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:13:29] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:13:29] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:13:29] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:18:29] [INFO] === Iteration 82 (6h elapsed) ===
+[0;34m[2025-07-04 01:18:29] [INFO] === Iteration 82 (6h elapsed) ===[0m
+[2025-07-04 01:18:29] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:18:29] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:18:29] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:18:29] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:23:29] [INFO] === Iteration 83 (6h elapsed) ===
+[0;34m[2025-07-04 01:23:29] [INFO] === Iteration 83 (6h elapsed) ===[0m
+[2025-07-04 01:23:29] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:23:29] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:23:29] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:23:29] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:28:29] [INFO] === Iteration 84 (6h elapsed) ===
+[0;34m[2025-07-04 01:28:29] [INFO] === Iteration 84 (6h elapsed) ===[0m
+[2025-07-04 01:28:29] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:28:29] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:28:50] [SUCCESS] Chat test passed - Response: 808 chars, RAG: true, Duration: 21s
+[0;32m[2025-07-04 01:28:50] [SUCCESS] Chat test passed - Response: 808 chars, RAG: true, Duration: 21s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-04 01:28:50] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-04 01:28:50] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-04 01:28:50] [INFO] HOURLY SUMMARY - Health: 84/84 (100%), Chat: 14/14 (100%)
+[0;34m[2025-07-04 01:28:50] [INFO] HOURLY SUMMARY - Health: 84/84 (100%), Chat: 14/14 (100%)[0m
+[2025-07-04 01:28:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:28:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:33:50] [INFO] === Iteration 85 (7h elapsed) ===
+[0;34m[2025-07-04 01:33:50] [INFO] === Iteration 85 (7h elapsed) ===[0m
+[2025-07-04 01:33:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:33:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:33:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:33:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:38:50] [INFO] === Iteration 86 (7h elapsed) ===
+[0;34m[2025-07-04 01:38:50] [INFO] === Iteration 86 (7h elapsed) ===[0m
+[2025-07-04 01:38:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:38:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:38:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:38:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:43:50] [INFO] === Iteration 87 (7h elapsed) ===
+[0;34m[2025-07-04 01:43:50] [INFO] === Iteration 87 (7h elapsed) ===[0m
+[2025-07-04 01:43:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:43:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:43:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:43:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:48:50] [INFO] === Iteration 88 (7h elapsed) ===
+[0;34m[2025-07-04 01:48:50] [INFO] === Iteration 88 (7h elapsed) ===[0m
+[2025-07-04 01:48:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:48:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:48:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:48:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:53:50] [INFO] === Iteration 89 (7h elapsed) ===
+[0;34m[2025-07-04 01:53:50] [INFO] === Iteration 89 (7h elapsed) ===[0m
+[2025-07-04 01:53:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:53:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:53:50] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:53:50] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 01:58:50] [INFO] === Iteration 90 (7h elapsed) ===
+[0;34m[2025-07-04 01:58:50] [INFO] === Iteration 90 (7h elapsed) ===[0m
+[2025-07-04 01:58:50] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 01:58:50] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 01:59:07] [SUCCESS] Chat test passed - Response: 387 chars, RAG: true, Duration: 17s
+[0;32m[2025-07-04 01:59:07] [SUCCESS] Chat test passed - Response: 387 chars, RAG: true, Duration: 17s[0m
+[2025-07-04 01:59:07] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 01:59:07] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:04:07] [INFO] === Iteration 91 (7h elapsed) ===
+[0;34m[2025-07-04 02:04:07] [INFO] === Iteration 91 (7h elapsed) ===[0m
+[2025-07-04 02:04:07] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:04:07] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:04:07] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:04:07] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:09:07] [INFO] === Iteration 92 (7h elapsed) ===
+[0;34m[2025-07-04 02:09:07] [INFO] === Iteration 92 (7h elapsed) ===[0m
+[2025-07-04 02:09:07] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:09:07] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:09:07] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:09:07] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:14:07] [INFO] === Iteration 93 (7h elapsed) ===
+[0;34m[2025-07-04 02:14:07] [INFO] === Iteration 93 (7h elapsed) ===[0m
+[2025-07-04 02:14:07] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:14:07] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:14:07] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:14:07] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:19:07] [INFO] === Iteration 94 (7h elapsed) ===
+[0;34m[2025-07-04 02:19:07] [INFO] === Iteration 94 (7h elapsed) ===[0m
+[2025-07-04 02:19:07] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:19:07] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:19:07] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:19:07] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:24:07] [INFO] === Iteration 95 (7h elapsed) ===
+[0;34m[2025-07-04 02:24:07] [INFO] === Iteration 95 (7h elapsed) ===[0m
+[2025-07-04 02:24:08] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:24:08] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:24:08] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:24:08] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:29:08] [INFO] === Iteration 96 (8h elapsed) ===
+[0;34m[2025-07-04 02:29:08] [INFO] === Iteration 96 (8h elapsed) ===[0m
+[2025-07-04 02:29:08] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:29:08] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:29:26] [SUCCESS] Chat test passed - Response: 509 chars, RAG: true, Duration: 18s
+[0;32m[2025-07-04 02:29:26] [SUCCESS] Chat test passed - Response: 509 chars, RAG: true, Duration: 18s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-04 02:29:26] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-04 02:29:26] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-04 02:29:26] [INFO] HOURLY SUMMARY - Health: 96/96 (100%), Chat: 16/16 (100%)
+[0;34m[2025-07-04 02:29:26] [INFO] HOURLY SUMMARY - Health: 96/96 (100%), Chat: 16/16 (100%)[0m
+[2025-07-04 02:29:26] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:29:26] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:34:26] [INFO] === Iteration 97 (8h elapsed) ===
+[0;34m[2025-07-04 02:34:26] [INFO] === Iteration 97 (8h elapsed) ===[0m
+[2025-07-04 02:34:26] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:34:26] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:34:26] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:34:26] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:39:26] [INFO] === Iteration 98 (8h elapsed) ===
+[0;34m[2025-07-04 02:39:26] [INFO] === Iteration 98 (8h elapsed) ===[0m
+[2025-07-04 02:39:26] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:39:26] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:39:26] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:39:26] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:44:26] [INFO] === Iteration 99 (8h elapsed) ===
+[0;34m[2025-07-04 02:44:26] [INFO] === Iteration 99 (8h elapsed) ===[0m
+[2025-07-04 02:44:26] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:44:26] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:44:26] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:44:26] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:49:26] [INFO] === Iteration 100 (8h elapsed) ===
+[0;34m[2025-07-04 02:49:26] [INFO] === Iteration 100 (8h elapsed) ===[0m
+[2025-07-04 02:49:26] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:49:26] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:49:26] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:49:26] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:54:26] [INFO] === Iteration 101 (8h elapsed) ===
+[0;34m[2025-07-04 02:54:26] [INFO] === Iteration 101 (8h elapsed) ===[0m
+[2025-07-04 02:54:26] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:54:26] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 02:54:26] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 02:54:26] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 02:59:26] [INFO] === Iteration 102 (8h elapsed) ===
+[0;34m[2025-07-04 02:59:26] [INFO] === Iteration 102 (8h elapsed) ===[0m
+[2025-07-04 02:59:26] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 02:59:26] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:00:06] [SUCCESS] Chat test passed - Response: 1892 chars, RAG: true, Duration: 40s
+[0;32m[2025-07-04 03:00:06] [SUCCESS] Chat test passed - Response: 1892 chars, RAG: true, Duration: 40s[0m
+[2025-07-04 03:00:06] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:00:06] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:05:06] [INFO] === Iteration 103 (8h elapsed) ===
+[0;34m[2025-07-04 03:05:06] [INFO] === Iteration 103 (8h elapsed) ===[0m
+[2025-07-04 03:05:06] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:05:06] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:05:06] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:05:06] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:10:06] [INFO] === Iteration 104 (8h elapsed) ===
+[0;34m[2025-07-04 03:10:06] [INFO] === Iteration 104 (8h elapsed) ===[0m
+[2025-07-04 03:10:06] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:10:06] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:10:06] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:10:06] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:15:06] [INFO] === Iteration 105 (8h elapsed) ===
+[0;34m[2025-07-04 03:15:06] [INFO] === Iteration 105 (8h elapsed) ===[0m
+[2025-07-04 03:15:06] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:15:06] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:15:06] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:15:06] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:20:06] [INFO] === Iteration 106 (8h elapsed) ===
+[0;34m[2025-07-04 03:20:06] [INFO] === Iteration 106 (8h elapsed) ===[0m
+[2025-07-04 03:20:06] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:20:06] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:20:06] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:20:06] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:25:06] [INFO] === Iteration 107 (8h elapsed) ===
+[0;34m[2025-07-04 03:25:06] [INFO] === Iteration 107 (8h elapsed) ===[0m
+[2025-07-04 03:25:06] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:25:06] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:25:06] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:25:06] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:30:06] [INFO] === Iteration 108 (9h elapsed) ===
+[0;34m[2025-07-04 03:30:06] [INFO] === Iteration 108 (9h elapsed) ===[0m
+[2025-07-04 03:30:06] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:30:06] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:30:23] [SUCCESS] Chat test passed - Response: 415 chars, RAG: true, Duration: 17s
+[0;32m[2025-07-04 03:30:23] [SUCCESS] Chat test passed - Response: 415 chars, RAG: true, Duration: 17s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-04 03:30:23] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-04 03:30:23] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-04 03:30:23] [INFO] HOURLY SUMMARY - Health: 108/108 (100%), Chat: 18/18 (100%)
+[0;34m[2025-07-04 03:30:23] [INFO] HOURLY SUMMARY - Health: 108/108 (100%), Chat: 18/18 (100%)[0m
+[2025-07-04 03:30:23] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:30:23] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:35:23] [INFO] === Iteration 109 (9h elapsed) ===
+[0;34m[2025-07-04 03:35:23] [INFO] === Iteration 109 (9h elapsed) ===[0m
+[2025-07-04 03:35:23] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:35:23] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:35:23] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:35:23] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:40:23] [INFO] === Iteration 110 (9h elapsed) ===
+[0;34m[2025-07-04 03:40:23] [INFO] === Iteration 110 (9h elapsed) ===[0m
+[2025-07-04 03:40:23] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:40:23] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:40:23] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:40:23] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:45:23] [INFO] === Iteration 111 (9h elapsed) ===
+[0;34m[2025-07-04 03:45:23] [INFO] === Iteration 111 (9h elapsed) ===[0m
+[2025-07-04 03:45:23] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:45:23] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:45:23] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:45:23] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:50:23] [INFO] === Iteration 112 (9h elapsed) ===
+[0;34m[2025-07-04 03:50:23] [INFO] === Iteration 112 (9h elapsed) ===[0m
+[2025-07-04 03:50:23] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:50:23] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:50:23] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:50:23] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 03:55:23] [INFO] === Iteration 113 (9h elapsed) ===
+[0;34m[2025-07-04 03:55:23] [INFO] === Iteration 113 (9h elapsed) ===[0m
+[2025-07-04 03:55:23] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 03:55:23] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 03:55:23] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 03:55:23] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:00:24] [INFO] === Iteration 114 (9h elapsed) ===
+[0;34m[2025-07-04 04:00:24] [INFO] === Iteration 114 (9h elapsed) ===[0m
+[2025-07-04 04:00:24] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:00:24] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:00:42] [SUCCESS] Chat test passed - Response: 647 chars, RAG: true, Duration: 18s
+[0;32m[2025-07-04 04:00:42] [SUCCESS] Chat test passed - Response: 647 chars, RAG: true, Duration: 18s[0m
+[2025-07-04 04:00:42] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:00:42] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:05:42] [INFO] === Iteration 115 (9h elapsed) ===
+[0;34m[2025-07-04 04:05:42] [INFO] === Iteration 115 (9h elapsed) ===[0m
+[2025-07-04 04:05:42] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:05:42] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:05:42] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:05:42] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:10:42] [INFO] === Iteration 116 (9h elapsed) ===
+[0;34m[2025-07-04 04:10:42] [INFO] === Iteration 116 (9h elapsed) ===[0m
+[2025-07-04 04:10:42] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:10:42] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:10:42] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:10:42] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:15:42] [INFO] === Iteration 117 (9h elapsed) ===
+[0;34m[2025-07-04 04:15:42] [INFO] === Iteration 117 (9h elapsed) ===[0m
+[2025-07-04 04:15:42] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:15:42] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:15:42] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:15:42] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:20:42] [INFO] === Iteration 118 (9h elapsed) ===
+[0;34m[2025-07-04 04:20:42] [INFO] === Iteration 118 (9h elapsed) ===[0m
+[2025-07-04 04:20:43] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:20:43] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:20:43] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:20:43] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:25:43] [INFO] === Iteration 119 (9h elapsed) ===
+[0;34m[2025-07-04 04:25:43] [INFO] === Iteration 119 (9h elapsed) ===[0m
+[2025-07-04 04:25:43] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:25:43] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:25:43] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:25:43] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:30:43] [INFO] === Iteration 120 (10h elapsed) ===
+[0;34m[2025-07-04 04:30:43] [INFO] === Iteration 120 (10h elapsed) ===[0m
+[2025-07-04 04:30:43] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:30:43] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:31:00] [SUCCESS] Chat test passed - Response: 525 chars, RAG: true, Duration: 17s
+[0;32m[2025-07-04 04:31:00] [SUCCESS] Chat test passed - Response: 525 chars, RAG: true, Duration: 17s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-04 04:31:00] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-04 04:31:00] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-04 04:31:00] [INFO] HOURLY SUMMARY - Health: 120/120 (100%), Chat: 20/20 (100%)
+[0;34m[2025-07-04 04:31:00] [INFO] HOURLY SUMMARY - Health: 120/120 (100%), Chat: 20/20 (100%)[0m
+[2025-07-04 04:31:00] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:31:00] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:36:00] [INFO] === Iteration 121 (10h elapsed) ===
+[0;34m[2025-07-04 04:36:00] [INFO] === Iteration 121 (10h elapsed) ===[0m
+[2025-07-04 04:36:01] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:36:01] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:36:01] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:36:01] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:41:01] [INFO] === Iteration 122 (10h elapsed) ===
+[0;34m[2025-07-04 04:41:01] [INFO] === Iteration 122 (10h elapsed) ===[0m
+[2025-07-04 04:41:01] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:41:01] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:41:01] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:41:01] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:46:01] [INFO] === Iteration 123 (10h elapsed) ===
+[0;34m[2025-07-04 04:46:01] [INFO] === Iteration 123 (10h elapsed) ===[0m
+[2025-07-04 04:46:01] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:46:01] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:46:01] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:46:01] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:51:01] [INFO] === Iteration 124 (10h elapsed) ===
+[0;34m[2025-07-04 04:51:01] [INFO] === Iteration 124 (10h elapsed) ===[0m
+[2025-07-04 04:51:01] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:51:01] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:51:01] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:51:01] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 04:56:01] [INFO] === Iteration 125 (10h elapsed) ===
+[0;34m[2025-07-04 04:56:01] [INFO] === Iteration 125 (10h elapsed) ===[0m
+[2025-07-04 04:56:01] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 04:56:01] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 04:56:01] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 04:56:01] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:01:01] [INFO] === Iteration 126 (10h elapsed) ===
+[0;34m[2025-07-04 05:01:01] [INFO] === Iteration 126 (10h elapsed) ===[0m
+[2025-07-04 05:01:01] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:01:01] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:01:20] [SUCCESS] Chat test passed - Response: 618 chars, RAG: true, Duration: 19s
+[0;32m[2025-07-04 05:01:20] [SUCCESS] Chat test passed - Response: 618 chars, RAG: true, Duration: 19s[0m
+[2025-07-04 05:01:20] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:01:20] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:06:20] [INFO] === Iteration 127 (10h elapsed) ===
+[0;34m[2025-07-04 05:06:20] [INFO] === Iteration 127 (10h elapsed) ===[0m
+[2025-07-04 05:06:20] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:06:20] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:06:20] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:06:20] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:11:20] [INFO] === Iteration 128 (10h elapsed) ===
+[0;34m[2025-07-04 05:11:20] [INFO] === Iteration 128 (10h elapsed) ===[0m
+[2025-07-04 05:11:20] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:11:20] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:11:20] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:11:20] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:16:20] [INFO] === Iteration 129 (10h elapsed) ===
+[0;34m[2025-07-04 05:16:20] [INFO] === Iteration 129 (10h elapsed) ===[0m
+[2025-07-04 05:16:20] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:16:20] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:16:20] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:16:20] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:21:20] [INFO] === Iteration 130 (10h elapsed) ===
+[0;34m[2025-07-04 05:21:20] [INFO] === Iteration 130 (10h elapsed) ===[0m
+[2025-07-04 05:21:20] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:21:20] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:21:20] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:21:20] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:26:20] [INFO] === Iteration 131 (10h elapsed) ===
+[0;34m[2025-07-04 05:26:20] [INFO] === Iteration 131 (10h elapsed) ===[0m
+[2025-07-04 05:26:20] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:26:20] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:26:20] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:26:20] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:31:20] [INFO] === Iteration 132 (11h elapsed) ===
+[0;34m[2025-07-04 05:31:20] [INFO] === Iteration 132 (11h elapsed) ===[0m
+[2025-07-04 05:31:20] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:31:20] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:31:39] [SUCCESS] Chat test passed - Response: 483 chars, RAG: true, Duration: 17s
+[0;32m[2025-07-04 05:31:39] [SUCCESS] Chat test passed - Response: 483 chars, RAG: true, Duration: 17s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-04 05:31:39] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-04 05:31:39] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-04 05:31:39] [INFO] HOURLY SUMMARY - Health: 132/132 (100%), Chat: 22/22 (100%)
+[0;34m[2025-07-04 05:31:39] [INFO] HOURLY SUMMARY - Health: 132/132 (100%), Chat: 22/22 (100%)[0m
+[2025-07-04 05:31:39] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:31:39] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:36:39] [INFO] === Iteration 133 (11h elapsed) ===
+[0;34m[2025-07-04 05:36:39] [INFO] === Iteration 133 (11h elapsed) ===[0m
+[2025-07-04 05:36:39] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:36:39] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:36:39] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:36:39] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:41:39] [INFO] === Iteration 134 (11h elapsed) ===
+[0;34m[2025-07-04 05:41:39] [INFO] === Iteration 134 (11h elapsed) ===[0m
+[2025-07-04 05:41:39] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:41:39] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:41:39] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:41:39] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:46:39] [INFO] === Iteration 135 (11h elapsed) ===
+[0;34m[2025-07-04 05:46:39] [INFO] === Iteration 135 (11h elapsed) ===[0m
+[2025-07-04 05:46:39] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:46:39] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:46:39] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:46:39] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:51:39] [INFO] === Iteration 136 (11h elapsed) ===
+[0;34m[2025-07-04 05:51:39] [INFO] === Iteration 136 (11h elapsed) ===[0m
+[2025-07-04 05:51:39] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:51:39] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:51:39] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:51:39] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 05:56:39] [INFO] === Iteration 137 (11h elapsed) ===
+[0;34m[2025-07-04 05:56:39] [INFO] === Iteration 137 (11h elapsed) ===[0m
+[2025-07-04 05:56:39] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 05:56:39] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 05:56:39] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 05:56:39] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:01:39] [INFO] === Iteration 138 (11h elapsed) ===
+[0;34m[2025-07-04 06:01:39] [INFO] === Iteration 138 (11h elapsed) ===[0m
+[2025-07-04 06:01:39] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:01:39] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:01:57] [SUCCESS] Chat test passed - Response: 459 chars, RAG: true, Duration: 18s
+[0;32m[2025-07-04 06:01:57] [SUCCESS] Chat test passed - Response: 459 chars, RAG: true, Duration: 18s[0m
+[2025-07-04 06:01:57] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:01:57] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:06:57] [INFO] === Iteration 139 (11h elapsed) ===
+[0;34m[2025-07-04 06:06:57] [INFO] === Iteration 139 (11h elapsed) ===[0m
+[2025-07-04 06:06:57] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:06:57] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:06:57] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:06:57] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:11:57] [INFO] === Iteration 140 (11h elapsed) ===
+[0;34m[2025-07-04 06:11:57] [INFO] === Iteration 140 (11h elapsed) ===[0m
+[2025-07-04 06:11:57] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:11:57] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:11:57] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:11:57] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:16:57] [INFO] === Iteration 141 (11h elapsed) ===
+[0;34m[2025-07-04 06:16:57] [INFO] === Iteration 141 (11h elapsed) ===[0m
+[2025-07-04 06:16:57] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:16:57] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:16:57] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:16:57] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:21:57] [INFO] === Iteration 142 (11h elapsed) ===
+[0;34m[2025-07-04 06:21:57] [INFO] === Iteration 142 (11h elapsed) ===[0m
+[2025-07-04 06:21:57] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:21:57] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:21:57] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:21:57] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:26:57] [INFO] === Iteration 143 (11h elapsed) ===
+[0;34m[2025-07-04 06:26:57] [INFO] === Iteration 143 (11h elapsed) ===[0m
+[2025-07-04 06:26:57] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:26:57] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:26:57] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:26:57] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:31:57] [INFO] === Iteration 144 (12h elapsed) ===
+[0;34m[2025-07-04 06:31:57] [INFO] === Iteration 144 (12h elapsed) ===[0m
+[2025-07-04 06:31:57] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:31:57] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:32:16] [SUCCESS] Chat test passed - Response: 582 chars, RAG: true, Duration: 19s
+[0;32m[2025-07-04 06:32:16] [SUCCESS] Chat test passed - Response: 582 chars, RAG: true, Duration: 19s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-04 06:32:16] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-04 06:32:16] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-04 06:32:16] [INFO] HOURLY SUMMARY - Health: 144/144 (100%), Chat: 24/24 (100%)
+[0;34m[2025-07-04 06:32:16] [INFO] HOURLY SUMMARY - Health: 144/144 (100%), Chat: 24/24 (100%)[0m
+[2025-07-04 06:32:16] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:32:16] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:37:16] [INFO] === Iteration 145 (12h elapsed) ===
+[0;34m[2025-07-04 06:37:16] [INFO] === Iteration 145 (12h elapsed) ===[0m
+[2025-07-04 06:37:16] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:37:16] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:37:16] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:37:16] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:42:16] [INFO] === Iteration 146 (12h elapsed) ===
+[0;34m[2025-07-04 06:42:16] [INFO] === Iteration 146 (12h elapsed) ===[0m
+[2025-07-04 06:42:16] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:42:16] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:42:16] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:42:16] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:47:16] [INFO] === Iteration 147 (12h elapsed) ===
+[0;34m[2025-07-04 06:47:16] [INFO] === Iteration 147 (12h elapsed) ===[0m
+[2025-07-04 06:47:16] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:47:16] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:47:16] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:47:16] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:52:16] [INFO] === Iteration 148 (12h elapsed) ===
+[0;34m[2025-07-04 06:52:16] [INFO] === Iteration 148 (12h elapsed) ===[0m
+[2025-07-04 06:52:16] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:52:16] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:52:16] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:52:16] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 06:57:16] [INFO] === Iteration 149 (12h elapsed) ===
+[0;34m[2025-07-04 06:57:16] [INFO] === Iteration 149 (12h elapsed) ===[0m
+[2025-07-04 06:57:16] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 06:57:16] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 06:57:16] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 06:57:16] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 07:02:16] [INFO] === Iteration 150 (12h elapsed) ===
+[0;34m[2025-07-04 07:02:16] [INFO] === Iteration 150 (12h elapsed) ===[0m
+[2025-07-04 07:02:16] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 07:02:16] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 07:02:34] [SUCCESS] Chat test passed - Response: 529 chars, RAG: true, Duration: 18s
+[0;32m[2025-07-04 07:02:34] [SUCCESS] Chat test passed - Response: 529 chars, RAG: true, Duration: 18s[0m
+[2025-07-04 07:02:34] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 07:02:34] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 07:07:34] [INFO] === Iteration 151 (12h elapsed) ===
+[0;34m[2025-07-04 07:07:34] [INFO] === Iteration 151 (12h elapsed) ===[0m
+[2025-07-04 07:07:34] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 07:07:34] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 07:07:34] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 07:07:34] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 07:12:34] [INFO] === Iteration 152 (12h elapsed) ===
+[0;34m[2025-07-04 07:12:34] [INFO] === Iteration 152 (12h elapsed) ===[0m
+[2025-07-04 07:12:34] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 07:12:34] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 07:12:34] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 07:12:34] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 07:17:34] [INFO] === Iteration 153 (12h elapsed) ===
+[0;34m[2025-07-04 07:17:34] [INFO] === Iteration 153 (12h elapsed) ===[0m
+[2025-07-04 07:17:34] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 07:17:34] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 07:17:34] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 07:17:34] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 07:22:34] [INFO] === Iteration 154 (12h elapsed) ===
+[0;34m[2025-07-04 07:22:34] [INFO] === Iteration 154 (12h elapsed) ===[0m
+[2025-07-04 07:22:34] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 07:22:34] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 07:22:34] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 07:22:34] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 07:27:34] [INFO] === Iteration 155 (12h elapsed) ===
+[0;34m[2025-07-04 07:27:34] [INFO] === Iteration 155 (12h elapsed) ===[0m
+[2025-07-04 07:27:34] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 07:27:34] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 07:27:34] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 07:27:34] [INFO] Waiting 5 minutes for next check...[0m
+[2025-07-04 07:32:34] [INFO] === Iteration 156 (13h elapsed) ===
+[0;34m[2025-07-04 07:32:34] [INFO] === Iteration 156 (13h elapsed) ===[0m
+[2025-07-04 07:32:34] [SUCCESS] Health check passed - Server status: OK
+[0;32m[2025-07-04 07:32:34] [SUCCESS] Health check passed - Server status: OK[0m
+[2025-07-04 07:32:56] [SUCCESS] Chat test passed - Response: 579 chars, RAG: true, Duration: 22s
+[0;32m[2025-07-04 07:32:56] [SUCCESS] Chat test passed - Response: 579 chars, RAG: true, Duration: 22s[0m
+ps: Invalid process id: 7925
+7926
+ps: Invalid process id: 7925
+7926
+[2025-07-04 07:32:56] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %
+[0;34m[2025-07-04 07:32:56] [INFO] Backend resources - PID: 7925
+7926, Memory: MB, CPU: %[0m
+./stability-test.sh: line 92: [: : integer expression expected
+[2025-07-04 07:32:56] [INFO] HOURLY SUMMARY - Health: 156/156 (100%), Chat: 26/26 (100%)
+[0;34m[2025-07-04 07:32:56] [INFO] HOURLY SUMMARY - Health: 156/156 (100%), Chat: 26/26 (100%)[0m
+[2025-07-04 07:32:56] [INFO] Waiting 5 minutes for next check...
+[0;34m[2025-07-04 07:32:56] [INFO] Waiting 5 minutes for next check...[0m

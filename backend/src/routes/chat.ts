@@ -1,11 +1,17 @@
 import express from 'express';
-import { ChatService } from '../services/ChatService';
+import { BulletproofChatService } from '../services/BulletproofChatService';
 
 const router = express.Router();
-const chatService = new ChatService();
+let chatService: BulletproofChatService;
 
 router.post('/message', async (req, res) => {
   try {
+    // Initialize ChatService lazily to avoid startup crashes
+    if (!chatService) {
+      console.log('Initializing BulletproofChatService...');
+      chatService = new BulletproofChatService();
+    }
+    
     const { message, context } = req.body;
     
     if (!message || typeof message !== 'string') {
@@ -17,7 +23,9 @@ router.post('/message', async (req, res) => {
     res.json({
       response: response.text,
       suggestions: response.suggestions,
-      relatedTopics: response.relatedTopics
+      relatedTopics: response.relatedTopics,
+      sources: response.sources || [],
+      rag_used: response.rag_used || false
     });
   } catch (error) {
     console.error('Chat error:', error);
@@ -26,8 +34,16 @@ router.post('/message', async (req, res) => {
 });
 
 router.get('/topics', (req, res) => {
-  const topics = chatService.getAvailableTopics();
-  res.json({ topics });
+  try {
+    if (!chatService) {
+      chatService = new BulletproofChatService();
+    }
+    const topics = chatService.getAvailableTopics();
+    res.json({ topics });
+  } catch (error) {
+    console.error('Topics error:', error);
+    res.status(500).json({ error: 'Failed to get topics' });
+  }
 });
 
 export default router;
