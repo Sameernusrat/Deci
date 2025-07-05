@@ -36,8 +36,8 @@ interface RAGResponse {
 
 export class BulletproofChatService {
   private logger: Logger;
-  private ollamaCircuitBreaker: CircuitBreaker;
-  private ragCircuitBreaker: CircuitBreaker;
+  private ollamaCircuitBreaker!: CircuitBreaker;
+  private ragCircuitBreaker!: CircuitBreaker;
   private isInitialized: boolean = false;
   private initializationError: Error | null = null;
 
@@ -95,9 +95,9 @@ CRITICAL:
       this.ragCircuitBreaker = new CircuitBreaker(
         this.executeRAGCall.bind(this),
         {
-          failureThreshold: 3,
-          resetTimeout: 30000, // 30 seconds  
-          timeout: 60000,      // 60 seconds
+          failureThreshold: 5,  // More forgiving threshold for production stability
+          resetTimeout: 20000,  // Faster recovery (20 seconds)
+          timeout: 90000,       // 90 seconds for comprehensive RAG responses
           name: 'RAG'
         }
       );
@@ -120,14 +120,13 @@ CRITICAL:
       const util = require('util');
       const execAsync = util.promisify(exec);
       
-      // Escape the question for shell execution
-      const escapedQuestion = question.replace(/'/g, "'\"'\"'");
-      const command = `python3 /Users/sameernusrat/deci/rag_bridge.py '${escapedQuestion}'`;
+      // Use stdin instead of shell arguments to avoid escaping issues
+      const command = `echo ${JSON.stringify(question)} | python3 /Users/sameernusrat/deci/rag_bridge.py`;
       
       this.logger.debug('Executing RAG command', { command });
       
       const { stdout, stderr } = await execAsync(command, {
-        timeout: 45000, // 45 second timeout for RAG
+        timeout: 75000, // 75 second timeout for comprehensive RAG responses
         cwd: '/Users/sameernusrat/deci'
       });
       
@@ -274,9 +273,9 @@ The system will automatically recover when external services are restored.`,
       let finalResponse: string | null = null;
       let usedRAG = false;
       let sources: any[] = [];
-      let serviceHealth = {
-        ollama: 'healthy' as const,
-        rag: 'healthy' as const
+      let serviceHealth: { ollama: 'healthy' | 'degraded' | 'down', rag: 'healthy' | 'degraded' | 'down' } = {
+        ollama: 'healthy',
+        rag: 'healthy'
       };
 
       // Try RAG first
@@ -374,7 +373,7 @@ The system will automatically recover when external services are restored.`,
         baseSuggestions.push('How is share valuation determined?');
       }
     } catch (error) {
-      this.logger.warn('Error generating suggestions', error);
+      this.logger.warn('Error generating suggestions', error as any);
     }
 
     return baseSuggestions.slice(0, 3);
@@ -390,7 +389,7 @@ The system will automatically recover when external services are restored.`,
         }
       });
     } catch (error) {
-      this.logger.warn('Error extracting related topics', error);
+      this.logger.warn('Error extracting related topics', error as any);
     }
 
     return relatedTopics.length > 0 ? relatedTopics.slice(0, 4) : this.topics.slice(0, 4);

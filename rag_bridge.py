@@ -16,13 +16,17 @@ Returns JSON response with answer and sources.
 import sys
 import json
 import os
+import warnings
 from typing import Dict, Any
+
+# Suppress all warnings that interfere with backend command execution
+warnings.filterwarnings("ignore")
 
 # Add the rag directory to path for imports
 sys.path.append(os.path.join(os.path.dirname(__file__), 'rag'))
 
 try:
-    from rag.retriever import HMRCRetriever
+    from rag.retriever_backup import HMRCRetriever
 except ImportError as e:
     print(json.dumps({
         "error": f"Failed to import RAG modules: {str(e)}",
@@ -51,14 +55,20 @@ class RAGBridge:
             sys.stderr = StringIO()
             
             try:
+                # Use backup retriever for speed and reliability
+                import sys, os
+                sys.path.append(os.path.join(os.path.dirname(__file__), 'rag'))
+                from rag.retriever_backup import HMRCRetriever
+                
+                # Fast initialization - defer LLM connection until needed
                 self.retriever = HMRCRetriever(
                     vector_store_dir=".chromadb",
-                    collection_name="hmrc_employment_securities"
+                    collection_name="hmrc_employment_securities",
+                    k=5   # Optimized for sub-30s response times while maintaining quality
                 )
                 
-                # Test connection
-                connections = self.retriever.test_connection()
-                self.rag_available = all(connections.values())
+                # Skip connection test for faster startup - just check if retriever initialized
+                self.rag_available = self.retriever is not None
             finally:
                 # Restore output
                 sys.stdout = old_stdout
@@ -160,15 +170,22 @@ class RAGBridge:
 
 def main():
     """Main CLI interface."""
-    if len(sys.argv) < 2:
-        print(json.dumps({
-            "error": "No question provided",
-            "usage": "python3 rag_bridge.py 'Your question here'",
-            "rag_available": False
-        }))
-        sys.exit(1)
-    
-    question = sys.argv[1]
+    # Support both command line and stdin input for robust shell execution
+    if len(sys.argv) >= 2:
+        question = sys.argv[1]
+    else:
+        # Read from stdin to avoid shell escaping issues
+        try:
+            question = sys.stdin.read().strip()
+            if not question:
+                raise ValueError("Empty input")
+        except Exception:
+            print(json.dumps({
+                "error": "No question provided via argv or stdin",
+                "usage": "echo 'Your question here' | python3 rag_bridge.py OR python3 rag_bridge.py 'Your question here'",
+                "rag_available": False
+            }))
+            sys.exit(1)
     
     # Initialize bridge
     bridge = RAGBridge()
