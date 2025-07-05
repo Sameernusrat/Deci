@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import { Logger } from './utils/Logger';
 import { BulletproofChatService } from './services/BulletproofChatService';
+import { memorySafeguards } from './middleware/memory-safeguards';
 
 // Initialize logger
 const logger = new Logger('EnhancedServer');
@@ -81,6 +82,11 @@ try {
   
   app.use(helmet());
   app.use(cors());
+  
+  // Memory safeguards - must be early in middleware chain
+  app.use(memorySafeguards.memoryCircuitBreaker());
+  app.use(memorySafeguards.middleware());
+  
   app.use(express.json({ limit: '10mb' }));
   app.use(express.urlencoded({ extended: true }));
   
@@ -100,6 +106,7 @@ app.get('/api/health', async (req, res) => {
       timestamp: new Date().toISOString(),
       uptime: process.uptime(),
       memory: process.memoryUsage(),
+      memoryStatus: memorySafeguards.getMemoryStatus(),
       pid: process.pid,
       services: {
         chatService: serviceInitialized,
@@ -286,12 +293,14 @@ app.get('/api/admin/service-health', (req, res) => {
       res.json({
         ...chatService.getServiceHealth(),
         serverUptime: process.uptime(),
+        memoryStatus: memorySafeguards.getMemoryStatus(),
         timestamp: new Date().toISOString()
       });
     } else {
       res.json({
         initialized: false,
         serverUptime: process.uptime(),
+        memoryStatus: memorySafeguards.getMemoryStatus(),
         timestamp: new Date().toISOString()
       });
     }
@@ -366,6 +375,9 @@ const startServer = async (): Promise<void> => {
     // Graceful shutdown
     const gracefulShutdown = (signal: string) => {
       logger.info(`Received ${signal}, shutting down gracefully...`);
+      
+      // Stop memory monitoring
+      memorySafeguards.stop();
       
       server.close(() => {
         logger.info('Server closed successfully');

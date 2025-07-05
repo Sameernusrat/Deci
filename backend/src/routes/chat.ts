@@ -1,15 +1,15 @@
 import express from 'express';
-import { SimpleChatService } from '../services/SimpleChatService';
+import { BulletproofChatService } from '../services/BulletproofChatService';
 
 const router = express.Router();
-let chatService: SimpleChatService;
+let chatService: BulletproofChatService;
 
 router.post('/message', async (req, res) => {
   try {
     // Initialize ChatService lazily to avoid startup crashes
     if (!chatService) {
-      console.log('Initializing SimpleChatService...');
-      chatService = new SimpleChatService();
+      console.log('Initializing BulletproofChatService...');
+      chatService = new BulletproofChatService();
     }
     
     const { message, context } = req.body;
@@ -36,7 +36,7 @@ router.post('/message', async (req, res) => {
 router.get('/topics', (req, res) => {
   try {
     if (!chatService) {
-      chatService = new SimpleChatService();
+      chatService = new BulletproofChatService();
     }
     const topics = chatService.getAvailableTopics();
     res.json({ topics });

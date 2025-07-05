@@ -40,13 +40,7 @@ export const speedLimiter = slowDown({
   delayMs: 500, // add 500ms delay per request after delayAfter
   maxDelayMs: 10000, // maximum delay of 10 seconds
   skipFailedRequests: true,
-  skipSuccessfulRequests: false,
-  onLimitReached: (req: Request) => {
-    logger.warn('Speed limit reached', { 
-      ip: req.ip, 
-      path: req.path 
-    });
-  }
+  skipSuccessfulRequests: false
 });
 
 // Request size limits
